@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Restaurant Bocking</string>
+
+    <string name="error">Error</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="booking">Booking</string>
+    <string name="hub">Hub</string>
+    <string name="buy">Buy</string>
+    <string name="warning">Warning</string>
+    <string name="okay">Okay</string>
+    <string name="close">Close</string>
+    <string name="about">About</string>
+    <string name="confirm">Confirm</string>
+
+    <string name="empty_data">Sorry! But you don\'t have any records yet</string>
+    <string name="error_notification">Sorry! Something went wrong. Try again later, please</string>
+
+    <string name="booking_information">Booking information</string>
+    <string name="personal_information">Personal information</string>
+
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+
+    <string name="table_number_format">Table number: %s</string>
+    <string name="booked_table_head_format">Table number %s (%s$)</string>
+    <string name="booked_by_format">Booked by %s %s %s</string>
+    <string name="date_and_time_format">%s    %s</string>
+    <string name="buy_for_format">Buy for %s$</string>
+    <string name="select_date">Select date</string>
+
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="patronymic">Patronymic</string>
+
+    <string name="fill_firstname">Fill firstname</string>
+    <string name="fill_lastname">Fill lastname</string>
+    <string name="fill_patronymic">Fill patronymic</string>
+    <string name="fill_date">Fill date, please</string>
+    <string name="fill_time">Fill time, please</string>
+    <string name="select_table_number">Select table number, please</string>
+    <string name="time_format_error">Sorry, but time is incorrect</string>
+    <string name="incorrect_date">Sorry! Date is incorrect</string>
+    <string name="fill_must_be_field">Field must be filled</string>
+    <string name="failed_load_image">Failed to load image</string>
+    <string name="show_more_information">Show more information</string>
+    <string name="records_loading">Records are loading</string>
+    <string name="google_maps_not_realised">Google maps are not realised yet!</string>
+    <string name="failed_to_cancel_booking">Failed to cancel the booking</string>
+    <string name="failed_to_delete_canceled_entry">Failed to delete canceled entry</string>
+    <string name="available_tables">Available tables</string>
+    <string name="available_nothing">Looks like there are no empty tables((</string>
+
+    <string name="restaurant_closed_alert_information">
+        Sorry! But selected time is wrong. Our restaurant is open from 9 AM to 11 PM.
+    </string>
+
+    <string name="incorrect_time_alert_information">
+        Sorry! But you can book a table for a time that is no later than the morning, afternoon or evening booking periods.
+        And not earlier that in 1 hour from current moment.
+    </string>
+
+    <string name="incorrect_date_alert_information">
+        Sorry! But you can book a table for a date that is no later than 2 weeks from the current date.
+	    And of course not EARLIER than today.
+    </string>
+
+    <string name="visit_settings_to_view_more_information">
+        You can visit settings to see more information.
+    </string>
+
+    <string name="periods_information">- Morning period is from 9 AM to 12 PM.\n- Afternoon period is from 12 PM to 5 PM.\n- Evening period is from 5 PM to 11 PM.</string>
+
+    <string name="working_hours">Working hours</string>
+    <string name="working_hours_information">Our restaurant is open every day. It is open from 9 am to 11 pm.</string>
+    <string name="about_application">About application</string>
+    <string name="about_application_information">The application was written by a beginner android developer. It is not a commercial product and does not carry any practical value and was written only to improve their skills and the technologies used.</string>
+    <string name="important">Important</string>
+    <string name="important_information">The data you provide will be transmitted over the network and is in the public domain. The developer is not responsible for your data. Be careful!</string>
+
+    <string name="table_numbers_list_description">Show list of table numbers</string>
+    <string name="check_selected_table_description">Check selected table</string>
+    <string name="booked_table_item_abilities_menu_description">Show booked table item abilities menu</string>
+    <string name="date_select_description">Show DatePicker to select date</string>
+    <string name="time_select_description">Show TimePicker to select time</string>
+    <string name="change_date_selection_way">Change date selection way</string>
+    <string name="show_location_description">Show restaurant location</string>
+    <string name="show_main_menu_items_description">Show main menu items</string>
+    <string name="bottom_navigation_item_description">Show bottom navigation %s item</string>
+    <string name="close_current_screen_description">Close current screen</string>
+    <string name="start_reload_description">Start reload</string>
+
+</resources>

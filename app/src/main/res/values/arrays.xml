@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="table_numbers">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="restaurant_image_urls" tools:ignore="TypographyDashes">
+        <item>https://i.pinimg.com/originals/5f/d7/33/5fd73318c6c2188bec8567e5188139c3.jpg</item>
+        <item>https://storage.myseldon.com/news-pict-41/41436C75B7F44795DD7FA0CB2E230692</item>
+        <item>https://catherineasquithgallery.com/uploads/posts/2021-03/1614646665_21-p-fon-kafe-dlya-fotoshopa-26.jpg</item>
+        <item>https://www.reelluxe.com/wp-content/uploads/2020/09/129-Burj-Al-Arab-Luxury-Hotel-Jumeirah-St-Dubai-UAE-Al-Mahara-Restaurant-Aquarium.jpg</item>
+        <item>https://catherineasquithgallery.com/uploads/posts/2021-03/1614646712_13-p-fon-kafe-dlya-fotoshopa-15.jpg</item>
+    </string-array>
+</resources>
