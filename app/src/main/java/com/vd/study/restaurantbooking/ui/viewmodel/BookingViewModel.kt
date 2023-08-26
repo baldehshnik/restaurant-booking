@@ -50,8 +50,7 @@ class BookingViewModel @Inject constructor(
                 changeNotificationState(
                     isAlertDialogVisible = WarningAlertDialogModel(
                         isVisible = true,
-                        stringId = R.string.incorrect_date_alert_information,
-                        showSettingsTooltip = false
+                        stringId = R.string.incorrect_date_alert_information
                     )
                 )
                 return
@@ -86,8 +85,7 @@ class BookingViewModel @Inject constructor(
                 changeNotificationState(
                     isAlertDialogVisible = WarningAlertDialogModel(
                         isVisible = true,
-                        stringId = R.string.restaurant_closed_alert_information,
-                        showSettingsTooltip = false
+                        stringId = R.string.restaurant_closed_alert_information
                     )
                 )
             }
@@ -96,8 +94,7 @@ class BookingViewModel @Inject constructor(
                 changeNotificationState(
                     isAlertDialogVisible = WarningAlertDialogModel(
                         isVisible = true,
-                        stringId = R.string.incorrect_time_alert_information,
-                        showSettingsTooltip = true
+                        stringId = R.string.incorrect_time_alert_information
                     )
                 )
             }
@@ -181,12 +178,18 @@ class BookingViewModel @Inject constructor(
 
                 is Response.Correct -> {
                     _saveBookedTableLiveData.value = SideEffect(true)
-                    // clear ui
+                    clearUI()
                 }
             }
             changeNotificationState(isBookingProgressVisible = false)
             _saveBookedTableLiveData.value = SideEffect(false)
         }
+    }
+
+    private fun clearUI() {
+        _bookingState.value = BookingDataState()
+        _personalState.value = PersonalDataState()
+        _notificationState.value = NotificationDataState(isBookedNotification = true)
     }
 
     private fun readEmptyTables() {
@@ -296,13 +299,16 @@ class BookingViewModel @Inject constructor(
 
     fun changeNotificationState(
         isAlertDialogVisible: WarningAlertDialogModel? = null,
-        isBookingProgressVisible: Boolean? = null
+        isBookingProgressVisible: Boolean? = null,
+        isBookedNotification: Boolean? = null
     ) {
         _notificationState.value = notificationState.value!!.copy(
             isAlertDialogVisible = isAlertDialogVisible
                 ?: notificationState.value!!.isAlertDialogVisible,
             isBookingProgressVisible = isBookingProgressVisible
-                ?: notificationState.value!!.isBookingProgressVisible
+                ?: notificationState.value!!.isBookingProgressVisible,
+            isBookedNotification = isBookedNotification
+                ?: notificationState.value!!.isBookedNotification
         )
     }
 
@@ -329,6 +335,7 @@ class BookingViewModel @Inject constructor(
 
     data class NotificationDataState(
         val isAlertDialogVisible: WarningAlertDialogModel = WarningAlertDialogModel(),
-        val isBookingProgressVisible: Boolean = false
+        val isBookingProgressVisible: Boolean = false,
+        val isBookedNotification: Boolean = false
     )
 }

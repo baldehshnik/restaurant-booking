@@ -28,6 +28,7 @@ import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import com.vd.study.restaurantbooking.R
 import com.vd.study.restaurantbooking.ui.model.WarningAlertDialogModel
+import com.vd.study.restaurantbooking.ui.screens.wigets.BookedNotificationDialog
 import com.vd.study.restaurantbooking.ui.screens.wigets.BookingFloatingActionButton
 import com.vd.study.restaurantbooking.ui.screens.wigets.BookingInformationCard
 import com.vd.study.restaurantbooking.ui.screens.wigets.BottomSheetDatePicker
@@ -112,21 +113,24 @@ fun BookingScreen(viewModel: BookingViewModel) {
                 isErrorLastname = personalState.isErrorLastname,
                 isErrorPatronymic = personalState.isErrorPatronymic,
                 onFirstnameValueChange = {
+                    val firstname = it.trim()
                     viewModel.changePersonalState(
-                        firstname = it,
-                        isErrorFirstname = it.isEmpty()
+                        firstname = firstname,
+                        isErrorFirstname = firstname.isEmpty()
                     )
                 },
                 onLastnameValueChange = {
+                    val lastname = it.trim()
                     viewModel.changePersonalState(
-                        lastname = it,
-                        isErrorLastname = it.isEmpty()
+                        lastname = lastname,
+                        isErrorLastname = lastname.isEmpty()
                     )
                 },
                 onPatronymicValueChange = {
+                    val patronymic = it.trim()
                     viewModel.changePersonalState(
-                        patronymic = it,
-                        isErrorPatronymic = it.isEmpty()
+                        patronymic = patronymic,
+                        isErrorPatronymic = patronymic.isEmpty()
                     )
                 }
             )
@@ -150,6 +154,12 @@ fun BookingScreen(viewModel: BookingViewModel) {
             )
         }
 
+        if (notificationState.isBookedNotification) {
+            BookedNotificationDialog {
+                viewModel.changeNotificationState(isBookedNotification = false)
+            }
+        }
+
         if (bookingState.isDatePickerDialogVisible) {
             BottomSheetDatePicker(
                 onDismiss = { viewModel.changeBookingState(isDatePickerDialogVisible = false) },
@@ -159,11 +169,11 @@ fun BookingScreen(viewModel: BookingViewModel) {
 
         if (notificationState.isAlertDialogVisible.isVisible) {
             WarningAlertDialog(
+                modifier = Modifier.padding(bottom = 20.dp),
                 contentId = notificationState.isAlertDialogVisible.stringId,
                 onDismiss = {
                     viewModel.changeNotificationState(isAlertDialogVisible = WarningAlertDialogModel())
-                },
-                showSettingsTooltip = notificationState.isAlertDialogVisible.showSettingsTooltip
+                }
             )
         }
 

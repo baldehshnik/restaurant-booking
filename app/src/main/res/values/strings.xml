@@ -12,6 +12,7 @@
     <string name="close">Close</string>
     <string name="about">About</string>
     <string name="confirm">Confirm</string>
+    <string name="success">Success</string>
 
     <string name="empty_data">Sorry! But you don\'t have any records yet</string>
     <string name="error_notification">Sorry! Something went wrong. Try again later, please</string>
@@ -62,11 +63,15 @@
 
     <string name="incorrect_date_alert_information">
         Sorry! But you can book a table for a date that is no later than 2 weeks from the current date.
-	    And of course not EARLIER than today.
+	    And not earlier than tomorrow.
     </string>
 
     <string name="visit_settings_to_view_more_information">
         You can visit settings to see more information.
+    </string>
+
+    <string name="booked_notification">
+        Selected table was booked! For more information you can follow to your hub and see your orders.
     </string>
 
     <string name="periods_information">- Morning period is from 9 AM to 12 PM.\n- Afternoon period is from 12 PM to 5 PM.\n- Evening period is from 5 PM to 11 PM.</string>
